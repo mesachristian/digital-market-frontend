@@ -1,0 +1,1 @@
+export const COURSE_API_URL = process.env.COURSE_API_URL ?? "http://localhost:5044"; 
