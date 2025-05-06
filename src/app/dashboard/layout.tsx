@@ -15,8 +15,8 @@ import { ThemeToggle } from "@/components/theme-toggle"
 export default function DashboardLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <SidebarProvider>
-            <div className="flex h-screen bg-background w-full">
-                <Sidebar className="border-r border-border">
+            <div className="flex h-screen w-full">
+                <Sidebar className="sidebar border-r border-border">
                     <SidebarHeader>
                         <div className="flex items-center justify-between px-4 py-2">
                             <h2 className="text-xl font-bold">Course Creator</h2>
@@ -27,7 +27,7 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
                         <SidebarMenu>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild>
-                                    <a href="/dashboard" className="flex items-center">
+                                    <a href="/dashboard" className="flex items-center text-muted-foreground hover:text-foreground">
                                         <Home className="mr-2 h-4 w-4" />
                                         <span>Dashboard</span>
                                     </a>
@@ -35,7 +35,7 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
                             </SidebarMenuItem>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild>
-                                    <a href="/dashboard/courses" className="flex items-center">
+                                    <a href="/dashboard/courses" className="flex items-center text-muted-foreground hover:text-foreground">
                                         <Book className="mr-2 h-4 w-4" />
                                         <span>Courses</span>
                                     </a>
@@ -43,7 +43,7 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
                             </SidebarMenuItem>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild>
-                                    <a href="/dashboard/profile" className="flex items-center">
+                                    <a href="/dashboard/profile" className="flex items-center text-muted-foreground hover:text-foreground">
                                         <User className="mr-2 h-4 w-4" />
                                         <span>Profile</span>
                                     </a>
@@ -51,7 +51,7 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
                             </SidebarMenuItem>
                             <SidebarMenuItem>
                                 <SidebarMenuButton asChild>
-                                    <a href="/dashboard/settings" className="flex items-center">
+                                    <a href="/dashboard/settings" className="flex items-center text-muted-foreground hover:text-foreground">
                                         <Settings className="mr-2 h-4 w-4" />
                                         <span>Settings</span>
                                     </a>
@@ -63,7 +63,7 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
                         <p className="text-sm text-muted-foreground px-4 py-2">© 2024 Course Creator</p>
                     </SidebarFooter>
                 </Sidebar>
-                <main className="flex-1 overflow-y-auto p-6">{children}</main>
+                <main className="main-content flex-1 overflow-y-auto p-6">{children}</main>
             </div>
         </SidebarProvider>
     )
